@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Used Car Price Prediction!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    
+  
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+              <form method="POST" action="/">
+                <label for="inputName">Item</label>
+                <input type="text" id="inputName" name="item">           
+                <input type="submit" value="submit">
+              </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Validation Data (31 rows unseen data in model train or test):
+              <span></span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    <div>
+      <body>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>cost</th>
+              <th>lot_time</th>
+              <th>is_over_age</th>
+              <th>mileage</th>
+              <th>vehicle_type</th>
+              <th>is_domestic</th>
+              <th>vehicle_age</th>
+              <th>age_group</th>
+              <th>color</th>
+              <th>make</th>
+              <th>state</th>
+              <th>make_model</th>
+            </tr>
+          </thead>
+          <tbody>
+        <!-- Loop through the dictionary -->
+        
+        {% for row in data %}
+          <tr> 
+              <td>{{ row.Item }}</td> 
+              <td>{{ row.cost }}</td>
+              <td>{{ row.lot_time }}</td>
+              <td>{{ row.is_over_age }}</td> 
+              <td>{{ row.mileage }}</td>
+              <td>{{ row.vehicle_type }}</td>
+              <td>{{ row.is_domestic }}</td> 
+              <td>{{ row.vehicle_age }}</td>
+              <td>{{ row.age_group }}</td>
+              <td>{{ row.color }}</td> 
+              <td>{{ row.make }}</td>
+              <td>{{ row.state }}</td>
+              <td>{{ row.make_model }}</td> 
+          </tr>
+        {% endfor %}
+
+      </tbody>
+    </div>
+  </div>
+</table>
+</body>
+<!-- <script src="index.js"></script> -->
+</html>

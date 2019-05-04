@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Used Car Prediction</title>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>.footerbg {
+        background-color: black; 
+        color: white;
+        }
+        .box{
+    padding: 45px;
+    background: white;
+    margin-top:5px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-bottom:5px;
+    align-content: center;
+    
+}</style>
+</head>
+<body>
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid navbg">
+                  <div class="navbar-header">
+                    <h1 class="text-success" class="text-center"><b> Used Car Sale Price Prediction</b> </h1>
+                  </div>
+                </div>
+        </nav> 
+        <form method="POST" action="/">
+            
+            
+            
+<div class="main">
+    <div class="container-fluid bg-2" >
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+        <div class="box">           
+            <table>
+            <!-- <tr><td><label for="inputcost">cost</label></td>
+                
+            <td><input type="text" id="inputcost" name="cost"></td></tr> -->
+            
+            <tr><td><label for="inputlot_time">lot_time</label></td>
+            <td><input type="text" id="inputlot_time" name="lot_time"></td></tr>
+
+            <tr><td><label for="inputis_over_age">is_over_age</label></td>
+            <td><select name="is_over_age">
+                    <option value="YES">YES</option>
+                    <option value="NO">NO</option>
+                </select>
+            </td></tr>
+
+            <tr><td><label for="inputmileage">mileage</label></td>
+                <td><input type="text" id="inputmileage" name="mileage"></td></tr>
+
+            <tr><td><label for="inputvehicle_type">vehicle_type</label></td>
+                <td><select name="vehicle_type">
+                        <option value="FAMILY.LARGE">FAMILY.LARGE</option>
+                        <option value="FAMILY.SMALL">FAMILY.SMALL</option>
+                        <option value="FAMILY.MEDIUM">FAMILY.MEDIUM</option>
+                        <option value="ECONOMY">ECONOMY</option>                        
+                        <option value="LUXURY">LUXURY</option>
+                    </select>
+                </td></tr>
+
+            <tr><td><label for="inputis_domestic">is_domestic</label></td>
+                <td><select name="is_domestic">
+                        <option value="Domestic">Domestic</option>
+                        <option value="Import">Import</option>
+                    </select>
+                </td></tr>
+
+            <tr><td><label for="inputvehicle_age">vehicle_age</label></td>
+                <td><input type="text" id="inputvehicle_age" name="vehicle_age"></td></tr>
+
+            <tr><td><label for="inputage_group">age_group</label></td>
+                <td><select name="age_group">
+                        <option value="SEVEN+">SEVEN+</option>
+                        <option value="SIX">SIX</option>
+                        <option value="FIVE">FIVE</option>
+                        <option value="FOUR">FOUR</option>
+                        <option value="ONE-THREE">ONE-THREE</option>
+                    </select>
+                </td></tr>
+
+            <tr><td><label for="inputcolor">color</label></td>
+                <td><select name="color">
+                        <option value="BLACK">BLACK</option>
+                        <option value="BLUE">BLUE</option>
+                        <option value="GOLD">GOLD</option>
+                        <option value="GREEN">GREEN</option>
+                        <option value="PURPLE">PURPLE</option>
+                        <option value="RED">RED</option>
+                        <option value="SILVER">SILVER</option>
+                        <option value="WHITE">WHITE</option>
+                    </select>
+                </td></tr>
+
+            <tr><td><label for="inputmake">make</label></td>
+                <td><select name="make">
+                        <option value="BUICK">BUICK</option>
+                        <option value="MAZDA">MAZDA</option>
+                        <option value="GEO">GEO</option>
+                        <option value="KIA">KIA</option>
+                        <option value="MERCURY">MERCURY</option>
+                        <option value="CHEVROLET">CHEVROLET</option>
+                        <option value="PLYMOUTH">PLYMOUTH</option>
+                        <option value="PONTIAC">PONTIAC</option>
+                        <option value="SILVER">SILVER</option>
+                        <option value="FORD">FORD</option>
+                        <option value="DODGE">DODGE</option>
+                        <option value="CHRYSLER">CHRYSLER</option>
+                        <option value="TOYOTA">TOYOTA</option>
+                        <option value="NISSAN">NISSAN</option>
+                        <option value="HYUNDAI">HYUNDAI</option>
+                        <option value="OLDSMOBILE">OLDSMOBILE</option>
+                        <option value="HONDA">HONDA</option>
+                        <option value="OTHER">OTHER</option>
+                        <option value="MITSUBISHI">MITSUBISHI</option>
+                        <option value="DAEWOO">DAEWOO</option>
+                        <option value="CADILLAC">CADILLAC</option>
+                    </select>
+                </td></tr>
+
+            <tr><td><label for="inputstate">state</label></td>
+                <td><select name="state">
+                        <option value="CA">California</option>
+                        <option value="TX">Texas</option>
+                        <option value="FL">Florida</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NV">Nevada</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="GA">Georgia</option>
+                        <option value="VA">Virginia</option>                        
+                    </select></td></tr>
+            
+
+            <tr><td><label for="inputmake_model">make_model</label></td>
+                
+                <td><select name="make_model">
+                        <option value="BUICK.CENTURY">BUICK.CENTURY</option>
+                        <option value="MAZDA.PROTEGE">MAZDA.PROTEGE</option>
+                        <option value="GEO.METRO">GEO.METRO</option>
+                        <option value="KIA.SEPHIA">KIA.SEPHIA</option>
+                        <option value="MERCURY.MYSTIQUE">MERCURY.MYSTIQUE</option>
+                        <option value="CHEVROLET.CAVALIER">CHEVROLET.CAVALIER</option>
+                        <option value="BUICK.LESABRE">BUICK.LESABRE</option>
+                        <option value="PLYMOUTH.ACCLAIM">PLYMOUTH.ACCLAIM</option>
+                        <option value="CHEVROLET.LUMINA">CHEVROLET.LUMINA</option>
+                        <option value="PONTIAC.GRAND AM">PONTIAC.GRAND AM</option>
+                        <option value="FORD.TAURUS">FORD.TAURUS</option>
+                        <option value="DODGE.NEON">DODGE.NEON</option>
+                        <option value="CHRYSLER.CONCORDE">CHRYSLER.CONCORDE</option>
+                        <option value="CHEVROLET.PRIZM">CHEVROLET.PRIZM</option>
+                        <option value="TOYOTA.COROLLA">TOYOTA.COROLLA</option>
+                        <option value="FORD.ESCORT">FORD.ESCORT</option>
+                        <option value="NISSAN.MAXIMA">NISSAN.MAXIMA</option>
+                        <option value="HYUNDAI.SONATA">HYUNDAI.SONATA</option>
+                        <option value="OLDSMOBILE.CUTLASS SUPREME">OLDSMOBILE.CUTLASS SUPREME</option>
+                        <option value="OLDSMOBILE.98">OLDSMOBILE.98</option>
+                        <option value="CHRYSLER.LHS">CHRYSLER.LHS</option>
+                        <option value="HONDA.CIVIC">HONDA.CIVIC</option>
+                        <option value="TOYOTA.TERCEL">TOYOTA.TERCEL</option>
+                        <option value="NISSAN.SENTRA">NISSAN.SENTRA</option>
+                        <option value="BUICK.REGAL">BUICK.REGAL</option>
+                        <option value="MAZDA.626">MAZDA.626</option>
+                        <option value="EAGLE.VISION">EAGLE.VISION</option>
+                        <option value="OLDSMOBILE.88">OLDSMOBILE.88</option>
+                        <option value="TOYOTA.CAMRY">TOYOTA.CAMRY</option>
+                        <option value="INFINITI.G20">INFINITI.G20</option>
+                        <option value="GEO.PRIZM">GEO.PRIZM</option>
+                        <option value="BUICK.SKYLARK">BUICK.SKYLARK</option>
+                        <option value="FORD.CONTOUR">FORD.CONTOUR</option>
+                        <option value="CHEVROLET.CORSICA">CHEVROLET.CORSICA</option>
+                        <option value="SUZUKI.ESTEEM">SUZUKI.ESTEEM</option>
+                        <option value="MERCURY.SABLE">MERCURY.SABLE</option>
+                        <option value="MITSUBISHI.GALANT">MITSUBISHI.GALANT</option>
+                        <option value="DODGE.INTREPID">DODGE.INTREPID</option>
+                        <option value="OLDSMOBILE.CIERA">OLDSMOBILE.CIERA</option>
+                        <option value="FORD.CROWN VICTORIA">FORD.CROWN VICTORIA</option>
+                        <option value="MITSUBISHI.MIRAGE">MITSUBISHI.MIRAGE</option>
+                        <option value="NISSAN.ALTIMA">NISSAN.ALTIMA</option>
+                        <option value="PONTIAC.BONNEVILLE">PONTIAC.BONNEVILLE</option>
+                        <option value="HYUNDAI.ACCENT">HYUNDAI.ACCENT</option>
+                        <option value="MERCURY.TRACER">MERCURY.TRACER</option>
+                        <option value="DAEWOO.LANOS">DAEWOO.LANOS</option>
+                        <option value="CHEVROLET.CAPRICE CLASSIC">CHEVROLET.CAPRICE CLASSIC</option>
+                        <option value="DODGE.SPIRIT">DODGE.SPIRIT</option>
+                        <option value="CHEVROLET.MALIBU">CHEVROLET.MALIBU</option>
+                        <option value="OLDSMOBILE.ACHIEVA">OLDSMOBILE.ACHIEVA</option>
+                        <option value="PONTIAC.GRAND PRIX">PONTIAC.GRAND PRIX</option>
+                        <option value="FORD.TEMPO">FORD.TEMPO</option>
+                        <option value="CADILLAC.DEVILLE">CADILLAC.DEVILLE</option>
+                        <option value="MERCURY.GRAND MARQUIS">MERCURY.GRAND MARQUIS</option>
+                        <option value="PONTIAC.SUNFIRE">PONTIAC.SUNFIRE</option>
+                        <option value="PLYMOUTH.NEON">PLYMOUTH.NEON</option>
+                        <option value="PLYMOUTH.BREEZE">PLYMOUTH.BREEZE</option>
+                        <option value="CHRYSLER.CIRRUS">CHRYSLER.CIRRUS</option>
+                        <option value="DODGE.STRATUS">DODGE.STRATUS</option>
+                        <option value="HYUNDAI.ELANTRA">HYUNDAI.ELANTRA</option>
+                        <option value="NISSAN.STANZA">NISSAN.STANZA</option>
+                        <option value="BUICK.ROADMASTER">BUICK.ROADMASTER</option>
+                        <option value="BUICK.PARK AVENUE">BUICK.PARK AVENUE</option>
+                        <option value="ACURA.INTEGRA">ACURA.INTEGRA</option>
+                        <option value="HONDA.ACCORD">HONDA.ACCORD</option>
+                        <option value="CHRYSLER.LEBARON">CHRYSLER.LEBARON</option>
+                        <option value="OLDSMOBILE.CUTLASS">OLDSMOBILE.CUTLASS</option>
+                        <option value="CHRYSLER.NEW YORKER">CHRYSLER.NEW YORKER</option>
+                        <option value="LINCOLN.TOWN CAR">LINCOLN.TOWN CAR</option>
+                        <option value="OLDSMOBILE.CALAIS">OLDSMOBILE.CALAIS</option>
+                        <option value="MAZDA.MILLENIA">MAZDA.MILLENIA</option>
+                        <option value="INFINITI.J30">INFINITI.J30</option>
+                        <option value="PONTIAC.SUNBIRD">PONTIAC.SUNBIRD</option>
+                        <option value="OLDSMOBILE.INTRIGUE">OLDSMOBILE.INTRIGUE</option>
+                        <option value="DODGE.DYNASTY">DODGE.DYNASTY</option>
+                        <option value="CHRYSLER.FIFTH AVENUE">CHRYSLER.FIFTH AVENUE</option>
+                        <option value="DAEWOO.NUBIRA">DAEWOO.NUBIRA</option>
+                        <option value="OLDSMOBILE.AURORA">OLDSMOBILE.AURORA</option>
+                        <option value="HYUNDAI.ACCENT GL">HYUNDAI.ACCENT GL</option>
+                        <option value="DAEWOO.LEGANZA">DAEWOO.LEGANZA</option>
+                        <option value="CHEVROLET.CAPRICE">CHEVROLET.CAPRICE</option>
+                        <option value="CADILLAC.SEVILLE">CADILLAC.SEVILLE</option>
+                        <option value="FORD.FOCUS">FORD.FOCUS</option>
+                        <option value="CHEVROLET.METRO">CHEVROLET.METRO</option>
+                        <option value="CADILLAC.FLEETWOOD RWD">CADILLAC.FLEETWOOD RWD</option>
+                        <option value="CADILLAC.CATERA">CADILLAC.CATERA</option>
+                        <option value="TOYOTA.AVALON">TOYOTA.AVALON</option>
+                        <option value="OLDSMOBILE.ALERO">OLDSMOBILE.ALERO</option>
+                        <option value="INFINITI.Q45">INFINITI.Q45</option>
+                        <option value="INFINITI.I30">INFINITI.I30</option>
+                        <option value="MERCURY.TOPAZ">MERCURY.TOPAZ</option>
+                        <option value="MITSUBISHI.MIRAGE DE">MITSUBISHI.MIRAGE DE</option>
+                        <option value="CHEVROLET.CELEBRITY">CHEVROLET.CELEBRITY</option>
+                        <option value="EAGLE.VISION TSI">EAGLE.VISION TSI</option>
+                        <option value="CADILLAC.BROUGHAM RWD">CADILLAC.BROUGHAM RWD</option>
+                        <option value="SUBARU.LOYALE">SUBARU.LOYALE</option>
+                        <option value="LEXUS.300">LEXUS.300</option>
+                        <option value="SATURN.SL-1">SATURN.SL-1</option>
+                        <option value="DAEWOO.NUBIRA SX">DAEWOO.NUBIRA SX</option>
+                        <option value="MAZDA.929">MAZDA.929</option>
+                        <option value="CHRYSLER.IMPERIAL">CHRYSLER.IMPERIAL</option>
+                        <option value="SATURN.S-SERIES">SATURN.S-SERIES</option>
+                        <option value="MITSUBISHI.DIAMANTE">MITSUBISHI.DIAMANTE</option>
+                        <option value="CHRYSLER.FWD">CHRYSLER.FWD</option>
+                        <option value="SATURN.SL">SATURN.SL</option>
+                        <option value="ACURA.VIGOR">ACURA.VIGOR</option>
+                        <option value="SUBARU.IMPREZA">SUBARU.IMPREZA</option>
+                        <option value="CADILLAC.FLEETWOOD">CADILLAC.FLEETWOOD</option>
+                        <option value="BUICK.LASABRE">BUICK.LASABRE</option>
+                        <option value="OLDSMOBILE.REGENCY">OLDSMOBILE.REGENCY</option>                        
+                    </select>
+                </td></tr>
+                
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+
+            <tr><td></td><td><input type="submit" class="btn btn-success" value="Get Car Value"></td></tr>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+</div>            
+        </form>
+    <div class="container-fluid text-center">
+                <footer class="container-fluid footerbg text-center">
+                        &copy; Copyright Srinivasa Rao Vikram
+                </footer>
+    </div>
+</body>
+</html>
+
+
+

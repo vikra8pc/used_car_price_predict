@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Used Car Price Prediction!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1>Predicted Car Value is :</h1>
+    <table class="table">
+        <thead>
+          <tr>            
+            <th>Predicted Car Value is :</th>
+          </tr>
+        </thead>
+        <tbody>
+    {% for row in data %}
+    
+    <tr> 
+              
+        <b><td>{{row.Predicted_Value}}</td></b>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+    <h1>Selected options are as below:</h1>
+  <table class="table">
+      <thead>
+        <tr>
+          
+          <th>lot_time</th>
+          <th>is_over_age</th>
+          <th>mileage</th>
+          <th>vehicle_type</th>
+          <th>is_domestic</th>
+          <th>vehicle_age</th>
+          <th>age_group</th>
+          <th>color</th>
+          <th>make</th>
+          <th>state</th>
+          <th>make_model</th>
+        </tr>
+      </thead>
+      <tbody>
+    <!-- Loop through the dictionary -->
+  {% for row in data[1] %}
+          <tr> 
+              
+              <td>{{ row.lot_time }}</td>
+              <td>{{ row.is_over_age }}</td> 
+              <td>{{ row.mileage }}</td>
+              <td>{{ row.vehicle_type }}</td>
+              <td>{{ row.is_domestic }}</td> 
+              <td>{{ row.vehicle_age }}</td>
+              <td>{{ row.age_group }}</td>
+              <td>{{ row.color }}</td> 
+              <td>{{ row.make }}</td>
+              <td>{{ row.state }}</td>
+              <td>{{ row.make_model }}</td> 
+          </tr>
+  {% endfor %}
+</tbody>
+</table>
+</body>
+<!-- <script src="index.js"></script> -->
+</html>
